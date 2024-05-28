@@ -1,17 +1,21 @@
 "use client";
 
-import { giftsServices } from "@/db/services/gifts";
+import { giftServices } from "@/db/services";
 import React from "react";
+import { ulid } from "ulid";
 
 function Action() {
   return (
     <button
-      style={{ width: 150, height: 100, backgroundColor: "white" }}
+      className="bg-white/20 rounded-md p-3"
       onClick={() => {
-        giftsServices.create();
+        giftServices.create({
+          title: ulid(),
+          value: Math.floor(Math.random() * 10000),
+        });
       }}
     >
-      Hifwqfqwfwq
+      Create Gift
     </button>
   );
 }

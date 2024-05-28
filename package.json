@@ -7,15 +7,19 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "generate": "drizzle-kit generate",
-    "migrate": "drizzle-kit migrate"
+    "turso:create-token": "turso db tokens create gifts-app -e none",
+    "turso:dev": "turso dev --db-file local.db",
+    "drizzle:generate": "drizzle-kit generate",
+    "drizzle:migrate": "drizzle-kit migrate",
+    "drizzle:studio": "drizzle-kit studio"
   },
   "dependencies": {
     "@libsql/client": "^0.6.0",
     "drizzle-orm": "^0.30.10",
     "next": "14.2.3",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "ulid": "^2.3.0"
   },
   "devDependencies": {
     "@types/node": "^20",
