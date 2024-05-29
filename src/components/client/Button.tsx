@@ -2,7 +2,7 @@
 
 import { giftServices } from "@/db/services";
 import React from "react";
-import { twMerge } from "tw-merge";
+import { twMerge } from "tailwind-merge";
 import { ulid } from "ulid";
 
 export function Button() {
