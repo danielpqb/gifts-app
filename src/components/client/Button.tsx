@@ -2,12 +2,13 @@
 
 import { giftServices } from "@/db/services";
 import React from "react";
+import { twMerge } from "tw-merge";
 import { ulid } from "ulid";
 
-function Action() {
+export function Button() {
   return (
     <button
-      className="bg-white/20 rounded-md p-3"
+      className={twMerge("bg-white/20 rounded-md p-3")}
       onClick={() => {
         giftServices.create({
           title: ulid(),
@@ -19,5 +20,3 @@ function Action() {
     </button>
   );
 }
-
-export default Action;

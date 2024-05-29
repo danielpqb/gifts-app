@@ -1,8 +1,8 @@
 "use server";
 
 import { revalidateTag, unstable_cache } from "next/cache";
-import { db } from "..";
-import { giftsTable } from "../schemas/gifts";
+import { db } from "@/db";
+import { giftsTable } from "@/db/schemas/gifts";
 
 export type TCreateGift = {
   title: string;
