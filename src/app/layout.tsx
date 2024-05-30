@@ -30,7 +30,60 @@ export default function RootLayout({
       className={twMerge(inter.variable, gv.variable, lobster.variable)}
       lang="en"
     >
-      <body className="font-inter">{children}</body>
+      <body className="font-inter">
+        <MainLayout>{children}</MainLayout>
+      </body>
     </html>
+  );
+}
+
+function MainLayout({ children }: { children: React.ReactNode }) {
+  return (
+    <main className="flex min-h-screen flex-col items-center justify-between bg-[url('/imgs/bg-body.jpg')] text-white">
+      <div className="fixed w-full h-[75vh] flex justify-between items-center p-5 xl:px-16 xl:py-[65vh] xl:h-screen xl:items-start">
+        <img
+          className="w-[60px] h-min xl:w-[100px]"
+          src={"/imgs/icon-nuvem-1.png"}
+          alt=""
+        />
+        <img
+          className="w-[60px] h-min xl:w-[100px]"
+          src={"/imgs/icon-nuvem-2.png"}
+          alt=""
+        />
+      </div>
+      <div className="hidden xl:flex absolute w-full h-[75vh] justify-between px-[60px] pt-10">
+        <img
+          className="w-[173px] h-min"
+          src={"/imgs/icon-nuvem-1.png"}
+          alt=""
+        />
+        <img
+          className="w-[204px] h-min"
+          src={"/imgs/icon-nuvem-3.png"}
+          alt=""
+        />
+      </div>
+
+      <div className="flex flex-col w-full items-center justify-center z-10">
+        <img
+          className="w-[24vw] py-5 xl:hidden"
+          src={"/imgs/icon-nuvem-1.png"}
+          alt=""
+        />
+        <div className="flex flex-col justify-center items-center w-full xl:pt-5">
+          <div className="z-10 w-[325px] h-[48px] bg-[url('/imgs/bg-faixa.png')] bg-contain flex items-center justify-center text-2xl font-medium">
+            <span>Chá de Bebê</span>
+          </div>
+          <div className="relative w-full h-[147px] top-[-44px] bg-[url('/imgs/nuvem-centro.png')] bg-contain bg-no-repeat bg-center flex items-center justify-center text-2xl font-medium">
+            <span className="text-[#65acac] font-lobster text-[2.5rem] xl:text-[3.5rem] xl:relative xl:top-2">
+              Gabriel
+            </span>
+          </div>
+        </div>
+
+        {children}
+      </div>
+    </main>
   );
 }

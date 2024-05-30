@@ -1,7 +1,7 @@
 {
   "version": "6",
   "dialect": "sqlite",
-  "id": "2f50d48f-0a66-478a-9c37-0c3fd5358de7",
+  "id": "86126283-5552-4840-9421-2cc42b4998dc",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "tables": {
     "gifts": {
@@ -12,7 +12,15 @@
           "type": "integer",
           "primaryKey": true,
           "notNull": true,
-          "autoincrement": false
+          "autoincrement": true
+        },
+        "uid": {
+          "name": "uid",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false,
+          "default": "'01HZ40RV8WNEG81C6YCEA75VDP'"
         },
         "title": {
           "name": "title",
@@ -47,7 +55,7 @@
           "name": "acquired",
           "type": "integer",
           "primaryKey": false,
-          "notNull": true,
+          "notNull": false,
           "autoincrement": false,
           "default": false
         }
