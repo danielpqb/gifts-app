@@ -2,6 +2,8 @@ import { Button } from "@/components/server/Button";
 import { Input } from "@/components/server/Input";
 import { giftServices } from "@/db/services";
 
+export const dynamic = 'force-dynamic'
+export const revalidate = 0; // revalidate every 0s
 export default async function Index() {
   return (
     <>
@@ -19,11 +21,15 @@ export default async function Index() {
           const value = e.get("value") as string;
           const url = e.get("url") as string;
 
-          giftServices.create({
-            title,
-            value: Number(value) || 0,
-            url: url || undefined,
-          });
+          try {
+            await giftServices.create({
+              title,
+              value: Number(value) || 0,
+              url: url || undefined,
+            });
+          } catch (error) {
+            throw error;
+          }
         }}
       >
         <Input
