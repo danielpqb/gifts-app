@@ -7,8 +7,8 @@ export default defineConfig({
     url:
       process.env.ENVIRONMENT === "local"
         ? "http://localhost:8080"
-        : process.env.DATABASE_URL || "",
-    authToken: process.env.DATABASE_AUTH_TOKEN,
+        : process.env.NUXT_TURSO_DB_URL || "",
+    authToken: process.env.NUXT_TURSO_DB_AUTH_TOKEN,
   },
   out: "./drizzle",
   driver: "turso",
