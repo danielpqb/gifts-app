@@ -1,6 +1,6 @@
 import { Gifts } from "@/components/server/Gifts";
 
-export default async function Page() {
+export default async function Index() {
   return (
     <>
       <div className="flex items-center justify-center w-full">

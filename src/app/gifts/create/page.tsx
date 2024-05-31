@@ -2,7 +2,7 @@ import { Button } from "@/components/server/Button";
 import { Input } from "@/components/server/Input";
 import { giftServices } from "@/db/services";
 
-export default async function Page() {
+export default async function Index() {
   return (
     <>
       <div className="flex items-center justify-center w-full">
