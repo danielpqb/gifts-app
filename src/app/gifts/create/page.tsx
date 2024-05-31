@@ -17,10 +17,12 @@ export default async function Index() {
           "use server";
           const title = e.get("title") as string;
           const value = e.get("value") as string;
+          const url = e.get("url") as string;
 
           giftServices.create({
             title,
             value: Number(value) || 0,
+            url: url || undefined,
           });
         }}
       >

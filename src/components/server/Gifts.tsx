@@ -16,7 +16,10 @@ export async function Gifts() {
           >
             <img
               className="w-full h-min"
-              src={"/imgs/icon-nuvem-2.png"}
+              src={
+                gift.url ||
+                `/imgs/icon-nuvem-${Math.floor(Math.random() * 3) + 1}.png`
+              }
               alt=""
             />
             <span className="">{gift.title}</span>

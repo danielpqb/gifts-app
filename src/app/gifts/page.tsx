@@ -10,7 +10,6 @@ export default async function Index() {
       </div>
 
       <Gifts />
-      
     </>
   );
 }
