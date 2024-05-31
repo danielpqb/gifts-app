@@ -3,8 +3,6 @@ import React from "react";
 import { Button } from "./Button";
 import { revalidatePath } from "next/cache";
 
-export const dynamic = 'force-dynamic'
-export const revalidate = 0 // revalidate every 0s
 export async function Gifts() {
   const gifts = await giftServices.findAll();
 
