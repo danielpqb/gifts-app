@@ -5,7 +5,7 @@ type TProps = React.DetailedHTMLProps<
   React.ButtonHTMLAttributes<HTMLButtonElement>,
   HTMLButtonElement
 >;
-export function Button({ className, children, ...others }: TProps) {
+export async function Button({ className, children, ...others }: TProps) {
   return (
     <button
       className={twMerge(

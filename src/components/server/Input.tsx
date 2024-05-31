@@ -9,7 +9,7 @@ type TProps = {
   placeholder?: string;
   type?: React.HTMLInputTypeAttribute;
 };
-export function Input({
+export async function Input({
   classNames,
   label,
   name,
