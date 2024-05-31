@@ -1,3 +1,5 @@
+"use client";
+
 import { Button } from "@/components/server/Button";
 import { Input } from "@/components/server/Input";
 import { giftServices } from "@/db/services";
@@ -14,7 +16,6 @@ export default async function Index() {
       <form
         className="flex flex-col gap-2"
         action={async (e) => {
-          "use server";
           const title = e.get("title") as string;
           const value = e.get("value") as string;
 
