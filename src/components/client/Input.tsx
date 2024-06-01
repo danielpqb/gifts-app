@@ -2,23 +2,24 @@ import React from "react";
 import { twMerge } from "tailwind-merge";
 
 type TProps = {
-  classNames?: { label?: string; input?: string };
+  classNames?: { label?: string; input?: string; container?: string };
   label?: string;
   name: string;
   required?: boolean;
   placeholder?: string;
   type?: React.HTMLInputTypeAttribute;
 };
-export async function Input({
+export function Input({
   classNames,
   label,
   name,
   required,
   placeholder,
   type,
+  ...others
 }: TProps) {
   return (
-    <div>
+    <div className={twMerge("w-full", classNames?.container)}>
       {label ? (
         <label
           className={twMerge(
@@ -32,12 +33,13 @@ export async function Input({
       <input
         type={type || "text"}
         placeholder={placeholder || "Digite aqui..."}
-        required={required ?? true}
+        required={required}
         name={name}
         className={twMerge(
           "bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5",
           classNames?.input
         )}
+        {...others}
       />
     </div>
   );

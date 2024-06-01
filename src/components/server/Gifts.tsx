@@ -1,6 +1,6 @@
 import { giftServices } from "@/db/services";
 import React from "react";
-import { Button } from "./Button";
+import { Button } from "../client/Button";
 import { revalidatePath } from "next/cache";
 
 export async function Gifts() {

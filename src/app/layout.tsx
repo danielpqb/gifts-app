@@ -39,7 +39,7 @@ export default function RootLayout({
 
 function MainLayout({ children }: { children: React.ReactNode }) {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between bg-[url('/imgs/bg-body.jpg')] text-white">
+    <main className="flex min-h-screen flex-col items-center justify-between bg-[url('/imgs/bg-body.jpg')] text-white pb-[14vh]">
       <div className="fixed w-full h-[75vh] flex justify-between items-center p-5 xl:px-16 xl:py-[65vh] xl:h-screen xl:items-start">
         <img
           className="w-[60px] h-min xl:w-[100px]"
